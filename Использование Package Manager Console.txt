@@ -1,0 +1,18 @@
+Invoke-RestMethod https://localhost:7110/api/students -Method GET
+
+Invoke-RestMethod https://localhost:7110/api/students/3 -Method GET
+
+Invoke-RestMethod https://localhost:7110/api/students -Method POST -Body (@{Name = "Олег"; Surname = "Сидоренко"; Age = 20; GPA = 10.5}| ConvertTo-Json)-ContentType "application/json; charset=utf-8"
+
+Invoke-RestMethod https://localhost:7110/api/students -Method GET
+
+Invoke-RestMethod https://localhost:7110/api/students -Method PUT -Body (@{Id = 4; Name = "Олег"; Surname = "Сидоренко"; Age = 27; GPA = 10.7}| ConvertTo-Json)-ContentType "application/json; charset=utf-8"
+
+Invoke-RestMethod https://localhost:7110/api/students -Method GET
+
+Invoke-RestMethod https://localhost:7110/api/students/4 -Method DELETE
+
+Invoke-RestMethod https://localhost:7110/api/students -Method GET
+
+
+
